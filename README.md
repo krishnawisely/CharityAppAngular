@@ -1,27 +1,25 @@
-# TemplateModel
+# Charity Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+### Synopsis
 
-## Development server
+The objective to create this project for two kind of peoples.
+One is who need money and another one is who want to contribute.
+These are all things happens via this application on online.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Applications
 
-## Code scaffolding
+- #### Completed
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  - Admin
+    - [x] Admin can login.
+    - [x] Admin can see list of donors.
+    - [x] Admin can see donor funded request details.
+  - Donor
+    - [x] Donor can register.
+    - [x] Donor can login.
+- #### On going
+  - [ ] Admin can raise request.
+- #### ToDo
+  - [ ] Admin can update fund request.
+  - [ ] Donor can contribute.
+  - [ ] Validation.
