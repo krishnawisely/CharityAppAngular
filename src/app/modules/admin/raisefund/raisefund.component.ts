@@ -60,6 +60,9 @@ export class RaisefundComponent implements OnInit {
 
     this.adminService.raiseFund(formData).subscribe( (res) => {
       console.log(res);
+      alert('Fund raise success!');
+    }, (err) => {
+      alert('Fund raise failed!');
     });
 
   }

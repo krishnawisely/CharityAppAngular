@@ -27,9 +27,9 @@ export class AdminService {
       return this.http.get(this.apiUrl+'/admin/listFundedDonor');
     }
 
-    raiseFund(fromData:any):any
+    raiseFund(formData:any):any
     {
-      return this.http.post(this.apiUrl+'/admin/raiseFund',fromData);
+      return this.http.post(this.apiUrl+'/admin/raiseFund',formData);
     }
 
 }
