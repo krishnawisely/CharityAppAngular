@@ -22,3 +22,4 @@ These are all things happens via this application on online.
 - #### ToDo
   - [ ] Admin can update fund request.
   - [ ] Donor can contribute.
+  - [ ] Validation.
