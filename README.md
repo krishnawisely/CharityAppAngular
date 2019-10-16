@@ -14,12 +14,12 @@ These are all things happens via this application on online.
     - [x] Admin can login.
     - [x] Admin can see list of donors.
     - [x] Admin can see donor funded request details.
+    - [x] Admin can raise request.
   - Donor
     - [x] Donor can register.
     - [x] Donor can login.
 - #### On going
-  - [ ] Admin can raise request.
+  - [ ] Donor can contribute.
 - #### ToDo
   - [ ] Admin can update fund request.
-  - [ ] Donor can contribute.
   - [ ] Validation.
