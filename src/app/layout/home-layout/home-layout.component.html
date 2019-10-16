@@ -1,0 +1,49 @@
+<div class="doc-top-nav">
+    <div class="top-nav-header doc-nav-item">
+        <a mat-flat-button color="primary" routerLink="/" class="doc-nav-item doc-nav-link">
+            <i class="material-icons">wb_incandescent</i>
+            Velicham Trust
+        </a>
+    </div>
+    <div class="top-nav-body">
+        <a mat-flat-button color="primary" routerLink="../home" class="doc-nav-item doc-nav-link">Home</a>
+        <a mat-flat-button color="primary" [matMenuTriggerFor]="admin" class="doc-nav-item doc-nav-link">          
+            <span>Admin</span>
+            <mat-icon>arrow_drop_down</mat-icon>
+        </a>
+        
+        <mat-menu #admin="matMenu">
+            <button routerLink="./adminlogin" mat-menu-item>
+                <span>Login</span>
+                <mat-icon>flight_land</mat-icon>
+            </button>
+        </mat-menu>
+
+        <a mat-flat-button color="primary" [matMenuTriggerFor]="donor" class="doc-nav-item doc-nav-link">
+            <span>Donor</span>
+            <mat-icon>arrow_drop_down</mat-icon>
+        </a>
+        <mat-menu #donor="matMenu">
+            <button routerLink="./signin" mat-menu-item>
+                <mat-icon>flight_land</mat-icon>
+                <span>Login</span>
+            </button>
+            <button routerLink="./signup" mat-menu-item>
+                <mat-icon>account_circle</mat-icon>
+                <span>Register</span>
+            </button>
+        </mat-menu>
+
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="grid" class="doc-nav-item doc-nav-link item-right">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+                <button routerLink="/" mat-menu-item>
+                    <mat-icon>person</mat-icon>
+                    <span>About us</span>
+                </button>
+        </mat-menu>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<p>Footer</p>

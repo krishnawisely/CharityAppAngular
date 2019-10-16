@@ -1,0 +1,22 @@
+<div class="row justify-content-center align-items-center row-height">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-img-top" style="margin-top: -50px;">
+                    <mat-icon style="font-size: 120px;margin-left: -100px;" color="primary">person_pin</mat-icon>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-primary">Donor Login</h4>
+                    <form [formGroup]="donorLoginForm" (ngSubmit)="donorLogin(donorLoginForm)" class="example-form">
+                        <mat-form-field class="example-full-width">
+                        <input formControlName="email" type="email" matInput placeholder="E-mail">
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                            <input formControlName="password" type="password" matInput placeholder="Password">
+                        </mat-form-field>
+                        <button type="submit" mat-raised-button color="primary">Login</button>
+                        <button type="reset" mat-raised-button color="warn">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

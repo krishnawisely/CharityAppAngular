@@ -1,0 +1,38 @@
+<div class="row justify-content-center align-items-center row-height">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-img-top" style="margin-top: -50px;">
+                    <mat-icon style="font-size: 120px;margin-left: -100px;" color="primary">person_pin</mat-icon>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-primary">Donor register</h4>
+                    <form [formGroup]="donorRegisterForm" (ngSubmit)="donorRegister(donorRegisterForm)" class="example-form">
+                        <mat-form-field class="example-full-width">
+                            <input formControlName="username" type="text" matInput placeholder="Username">
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                        <input formControlName="email" type="email" matInput placeholder="E-mail">
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                            <input formControlName="password" type="password" matInput placeholder="Password">
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                            <input formControlName="dateOfBirth" matInput [matDatepicker]="picker" placeholder="Choose date of birth">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                        <mat-label>Select gender</mat-label>
+                            <mat-select formControlName="gender">
+                                <mat-option value="MALE">Male</mat-option>
+                                <mat-option value="FEMALE">Fmale</mat-option>
+                                <mat-option value="TRANSGENDER">Transgender</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <button type="submit" mat-raised-button color="primary">Login</button>
+                        <button type="reset" mat-raised-button color="warn">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
