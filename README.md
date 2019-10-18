@@ -20,6 +20,7 @@ These are all things happens via this application on online.
     - [x] Donor can login.
     - [x] Donor can contribute.
 - #### On going
-    - [ ] Admin can update fund request.
+    - [ ] Navigation.
 - #### ToDo
     - [ ] Validation for forms.
+    - [ ] Admin can update fund request.
