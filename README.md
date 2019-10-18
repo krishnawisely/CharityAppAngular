@@ -23,6 +23,12 @@ These are all things happens via this application on online.
     - [ ] Navigation.
 - #### ToDo
     - [ ] Validation for forms.
+      - [ ] Admin login
+      - [ ] Donor login
+      - [ ] Donor Register
+      - [ ] Raise fund
+      - [ ] Update fund
+      - [ ] Contribute fund
     - [ ] Admin can update fund request.
     - [ ] Footer
     - [ ] Bootstrap alerts.
