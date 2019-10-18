@@ -24,3 +24,4 @@ These are all things happens via this application on online.
 - #### ToDo
     - [ ] Validation for forms.
     - [ ] Admin can update fund request.
+    - [ ] Footer
