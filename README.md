@@ -18,8 +18,8 @@ These are all things happens via this application on online.
   - Donor
     - [x] Donor can register.
     - [x] Donor can login.
+    - [x] Donor can contribute.
 - #### On going
-  - [ ] Donor can contribute.
+    - [ ] Admin can update fund request.
 - #### ToDo
-  - [ ] Admin can update fund request.
-  - [ ] Validation.
+    - [ ] Validation.
