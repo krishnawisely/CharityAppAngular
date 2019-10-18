@@ -1,4 +1,4 @@
-# Charity Application
+# Velicham Trust Application
 
 ### Synopsis
 
