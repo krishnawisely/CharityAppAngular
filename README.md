@@ -25,3 +25,4 @@ These are all things happens via this application on online.
     - [ ] Validation for forms.
     - [ ] Admin can update fund request.
     - [ ] Footer
+    - [ ] Bootstrap alerts.
