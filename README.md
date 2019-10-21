@@ -1,4 +1,4 @@
-# Charity Application
+# Velicham Trust Application
 
 ### Synopsis
 
@@ -14,12 +14,22 @@ These are all things happens via this application on online.
     - [x] Admin can login.
     - [x] Admin can see list of donors.
     - [x] Admin can see donor funded request details.
+    - [x] Admin can raise request.
+    - [x] Admin can update fund request.
   - Donor
     - [x] Donor can register.
     - [x] Donor can login.
+    - [x] Donor can contribute.
+  - Validation for forms
+      - [x] Admin login
+      - [x] Donor login
+      - [x] Donor Register
+      - [x] Raise fund
+      - [x] Update fund
 - #### On going
-  - [ ] Admin can raise request.
+    - [ ] Validation for forms.
+      - [ ] Contribute fund
 - #### ToDo
-  - [ ] Admin can update fund request.
-  - [ ] Donor can contribute.
-  - [ ] Validation.
+    - [ ] Donor can see contribution details.
+    - [ ] Footer
+    - [ ] Bootstrap alerts.
