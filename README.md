@@ -33,3 +33,4 @@ These are all things happens via this application on online.
     - [ ] Donor can see contribution details.
     - [ ] Footer
     - [ ] Bootstrap alerts.
+    - [ ] About us.
