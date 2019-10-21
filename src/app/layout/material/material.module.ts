@@ -10,7 +10,8 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatSelectModule,
-  MatTableModule
+  MatTableModule,
+  MatTooltipModule
  } from '@angular/material';
 
 const material = [
@@ -22,7 +23,8 @@ const material = [
   MatDatepickerModule,
   MatNativeDateModule,
   MatSelectModule,
-  MatTableModule
+  MatTableModule,
+  MatTooltipModule
 ];
 
 @NgModule({

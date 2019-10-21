@@ -24,4 +24,8 @@ export class DonorService {
   {
     return this.http.post(this.apiUrl+'/donor/register',formData);
   }
+  contributeFund(formData:any)
+  {
+    return this.http.post(this.apiUrl+'/donor/contribute',formData);
+  }
 }

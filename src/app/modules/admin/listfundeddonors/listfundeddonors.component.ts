@@ -9,6 +9,8 @@ import { AdminService } from 'src/app/core/admin/admin.service';
 })
 export class ListfundeddonorsComponent implements OnInit {
 
+  listFundedDonor:any;
+
   constructor(
     private adminService:AdminService
   ) { }
@@ -20,21 +22,23 @@ export class ListfundeddonorsComponent implements OnInit {
   listFundedDonors()
   {
     this.adminService.listFundedDonors().subscribe( (res)=> {
+      
+      this.listFundedDonor = res;
       console.log(res);
-      var tableList = document.getElementById('donorList');
-      var content = '';
-      for(let resData of res)
-      {
-        content += '<tr><td>';
-        content += resData.donor.name+'</td>';
-        content += '<td>'+resData.donor.email+'</td>';
-        content += '<td>'+resData.fundRequest.requestType+'</td>';
-        content += '<td>'+resData.amount+'</td>';
-        content += '<td>'+resData.date+'</td></tr>';
+      // var tableList = document.getElementById('donorList');
+      // var content = '';
+      // for(let resData of res)
+      // {
+      //   content += '<tr><td>';
+      //   content += resData.donor.name+'</td>';
+      //   content += '<td>'+resData.donor.email+'</td>';
+      //   content += '<td>'+resData.fundRequest.requestType+'</td>';
+      //   content += '<td>'+resData.amount+'</td>';
+      //   content += '<td>'+resData.date+'</td></tr>';
        
-      }
+      // }
 
-      tableList.innerHTML = content;
+      // tableList.innerHTML = content;
     });
   }
 

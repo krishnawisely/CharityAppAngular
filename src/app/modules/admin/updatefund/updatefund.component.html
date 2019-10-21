@@ -1,17 +1,76 @@
-<div class="row justify-content-center">
+<div class="row justify-content-center" *ngIf='!isUpdateButtonClicked'>   
     <div class="col-md-6">
+        <div class="alert alert-primary alert-dismissible fade show" *ngIf="updateStatus" role="alert">
+            {{updateMessage}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
        <table class="table">
          <thead>
            <tr>
              <th>Request Type</th>
-             <th>Amount</th>
+             <th>Funded Amount</th>
              <th>Expiry Date</th>
              <th>Action</th>
            </tr>
          </thead>
          <tbody id="listRequest">
-          
+            <tr *ngFor='let data of fundData'>
+              <td>{{data.requestType}}</td>
+              <td>{{data.amount}}</td>
+              <td>{{data.expireDate}}</td>
+              <td>
+                <button mat-raised-button color="warn" (click)='updateBtn(data.id)'>Update</button>
+                <button mat-raised-button color="primary" (click)='showDescription(data.description)'>Info</button>
+              </td>
+            </tr>
          </tbody>
        </table>
     </div>
+</div>
+
+<div class="row justify-content-center align-items-center" style="height: 100vh;" *ngIf='isUpdateButtonClicked'>
+  <div class="col-md-4">
+      <div class="card text-center">
+          <div class="card-img-top" style="margin-top: -50px;">
+              <mat-icon style="font-size: 120px;margin-left: -100px;" color="primary">person_pin</mat-icon>
+          </div>
+          <div class="card-body">
+              <h4 class="card-title">Update Fund</h4>
+              <form class="example-form" [formGroup]="updateFundForm" (ngSubmit)="updateFund(updateFundForm)">
+                  <mat-form-field class="example-full-width">
+                      <mat-label>Select request type</mat-label>
+                      <mat-select formControlName="requesType">
+                          <mat-option value="EDUCATION">Education</mat-option>
+                          <mat-option value="FOOD">Food</mat-option>
+                          <mat-option value="AGRICULTURE">Agriculture</mat-option>
+                          <mat-option value="Others">Others</mat-option>
+                      </mat-select>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                      <input formControlName="amount" type="text" matInput placeholder="Amount(Rs)"
+                      pattern="(\d{3,9})(\.\d{1,2})?"
+                      matTooltip="Amount should be like '100.50' or '100'"
+                      >
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                      <input formControlName="expiryDate" matInput [matDatepicker]="picker" placeholder="Choose expiry date"
+                      matTooltip="Date format should be DD/MM/YYYY" 
+                      >
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                      <textarea formControlName="description" matInput placeholder="Description"
+                       minlength="10" maxlength="150"
+                       matTooltip="Description min length is 10 and max length is 150"
+                       ></textarea>
+                  </mat-form-field>
+                  <button type="submit" mat-raised-button color="primary" [disabled]="updateFundForm.invalid">Update Fund</button>
+                  <button type="reset" mat-raised-button color="warn">Reset</button>
+              </form>
+          </div>
+      </div>
+  </div>
 </div>

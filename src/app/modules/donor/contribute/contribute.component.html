@@ -1,16 +1,44 @@
-<div class="row justify-content-center">
-    <div class="col-md-8">
+<div class="row justify-content-center" *ngIf='!isContributeButtonClicked'>
+    <div class="col-md-6">
         <table class="table">
             <thead>
                 <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>Request Type</th>
+                    <th>Needed Amount(Rs)</th>
+                    <th>Expiry Date</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-               
+               <tr *ngFor='let data of tableData'>
+                    <td>{{data.requestType}}</td>
+                    <td>{{data.amount}}</td>
+                    <td>{{data.expireDate}}</td>
+                    <td>
+                      <button mat-raised-button color="warn" (click)='contributeBtn(data.id)'>Contribute</button>
+                      <button mat-raised-button color="primary" (click)='showDescription(data.description)'>Info</button>
+                    </td>
+               </tr>
             </tbody>
         </table>
+    </div>
+</div>
+<div class="row justify-content-center" *ngIf='isContributeButtonClicked'>
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Contribute fund</h4>
+                <div class="alert alert-warning" role="alert">
+                    If your fund amount is grater than needed amount it will be acceptable!
+                </div>
+                <mat-form-field class="example-full-width">
+                        <input [(ngModel)]="amount" type="number" matInput placeholder="Amount(Rs)"
+                        pattern="(\d{3,9})(\.\d{1,2})?"
+                        >
+                    </mat-form-field>
+                <button mat-raised-button color="primary" (click)='contributeFund()' [disabled]="!amount">Donate</button>
+                <button mat-raised-button color="primary" (click)='back()'>Back</button>
+            </div>
+        </div>
     </div>
 </div>

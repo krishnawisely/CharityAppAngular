@@ -32,4 +32,14 @@ export class AdminService {
       return this.http.post(this.apiUrl+'/admin/raiseFund',formData);
     }
 
+    updateFund(formData:any)
+    {
+      return this.http.put(this.apiUrl+'/admin/updateFund',formData);
+    }
+
+    listFundDetails()
+    {
+      return this.http.get(this.apiUrl+'/admin/listFundDetails');
+    }
+
 }

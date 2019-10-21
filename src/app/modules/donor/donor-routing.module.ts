@@ -5,12 +5,17 @@ import { ContributeComponent } from './contribute/contribute.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'donorhome',
     component: DonorHomeComponent
   },
   {
     path:'contribute',
     component: ContributeComponent
+  },
+  {
+    path:'',
+    redirectTo:'donorhome',
+    pathMatch:'full'
   }
 ];
 

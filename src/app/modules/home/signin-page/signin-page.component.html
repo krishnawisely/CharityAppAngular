@@ -13,7 +13,7 @@
                         <mat-form-field class="example-full-width">
                             <input formControlName="password" type="password" matInput placeholder="Password">
                         </mat-form-field>
-                        <button type="submit" mat-raised-button color="primary">Login</button>
+                        <button type="submit" mat-raised-button color="primary" [disabled]="donorLoginForm.invalid">Login</button>
                         <button type="reset" mat-raised-button color="warn">Reset</button>
                     </form>
                 </div>

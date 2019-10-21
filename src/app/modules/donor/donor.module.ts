@@ -6,6 +6,7 @@ import { DonorHomeComponent } from './donor-home/donor-home.component';
 import { ContributeComponent } from './contribute/contribute.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from 'src/app/layout/material/material.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [DonorHomeComponent,ContributeComponent],
@@ -13,7 +14,8 @@ import { MaterialModule } from 'src/app/layout/material/material.module';
     CommonModule,
     DonorRoutingModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class DonorModule { }

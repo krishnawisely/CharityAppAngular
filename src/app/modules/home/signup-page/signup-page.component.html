@@ -8,16 +8,20 @@
                     <h4 class="card-title text-primary">Donor register</h4>
                     <form [formGroup]="donorRegisterForm" (ngSubmit)="donorRegister(donorRegisterForm)" class="example-form">
                         <mat-form-field class="example-full-width">
-                            <input formControlName="username" type="text" matInput placeholder="Username">
+                            <input formControlName="username" type="text" matInput placeholder="Username" matTooltip="Username must be alphabetic, minimum size is 5 and maximum size is 15">
                         </mat-form-field>
                         <mat-form-field class="example-full-width">
-                        <input formControlName="email" type="email" matInput placeholder="E-mail">
+                        <input formControlName="email" type="text" matInput placeholder="E-mail" matTooltip="Email must be like 'example@gmail.com'">
                         </mat-form-field>
                         <mat-form-field class="example-full-width">
-                            <input formControlName="password" type="password" matInput placeholder="Password">
+                            <input formControlName="password" type="text" matInput placeholder="Password" 
+                            matTooltip="Password must be alphanumeric or alphabetic, minimum length is 6 and maximum length is 15">
                         </mat-form-field>
                         <mat-form-field class="example-full-width">
-                            <input formControlName="dateOfBirth" matInput [matDatepicker]="picker" placeholder="Choose date of birth">
+                            <input formControlName="dateOfBirth" matInput [matDatepicker]="picker"
+                            matTooltip="Date format should be DD/MM/YYYY" 
+                            placeholder="Choose date of birth"
+                            >
                             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                             <mat-datepicker #picker></mat-datepicker>
                         </mat-form-field>
@@ -29,7 +33,7 @@
                                 <mat-option value="TRANSGENDER">Transgender</mat-option>
                             </mat-select>
                         </mat-form-field>
-                        <button type="submit" mat-raised-button color="primary">Login</button>
+                        <button type="submit" mat-raised-button color="primary" [disabled]="donorRegisterForm.invalid">Register</button>
                         <button type="reset" mat-raised-button color="warn">Reset</button>
                     </form>
                 </div>

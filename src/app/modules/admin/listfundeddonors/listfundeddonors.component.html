@@ -1,19 +1,39 @@
 <div class="row justify-content-center">
     <div class="col-md-10">
       <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <table class="table">
               <thead>
                 <tr>
                   <th>Donor name</th>
                   <th>Donor E-mail</th>
                   <th>Request Type</th>
+                  <th>Target Amount</th>
                   <th>Amount Funded</th>
                   <th>Date</th>
                 </tr>
               </thead>
-              <tbody id="donorList">
-               
+              <tbody>
+                <tr *ngFor="let data of listFundedDonor">
+                  <td>
+                    {{data.donor.name}}
+                  </td>
+                  <td>
+                    {{data.donor.email}}
+                  </td>
+                  <td>
+                    {{data.fundRequest.requestType}}
+                  </td>
+                  <td>
+                    {{data.fundRequest.amount}}
+                  </td>
+                  <td>
+                     {{ data.amount }}
+                  </td>
+                  <td>
+                    {{ data.date }}
+                  </td>
+                </tr>
               </tbody>
             </table>
         </div>

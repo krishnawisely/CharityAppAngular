@@ -18,12 +18,17 @@ export class SignupPageComponent implements OnInit {
     private router:Router
     ) { }
 
+    /** RegExp **/ 
+    userNameRegex = "^[a-zA-Z]{5,15}$";
+    // emailRegex = "\S+@\S+\.\S+";
+    passwordRegex = "^[a-zA-Z0-9]{6,15}$";
+
   ngOnInit() {
     this.donorRegisterForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required],
-      dateOfBirth: ['', Validators.required],
+      username: ['', [Validators.required,Validators.pattern(this.userNameRegex)]],
+      email: ['', [Validators.required,Validators.email]],
+      password: ['', [Validators.required,Validators.pattern(this.passwordRegex)]],
+      dateOfBirth: ['', [Validators.required]],
       gender: ['', Validators.required]
     });
   }

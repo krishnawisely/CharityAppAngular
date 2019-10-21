@@ -8,7 +8,7 @@ import { ListfundeddonorsComponent } from './listfundeddonors/listfundeddonors.c
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'adminhome',
     component: AdminHomeComponent
   },
   {
@@ -26,6 +26,11 @@ const routes: Routes = [
   {
     path: 'listfundeddonors',
     component: ListfundeddonorsComponent
+  },
+  {
+    path:'',
+    redirectTo: 'adminhome',
+    pathMatch:'full'
   }
 ];
 

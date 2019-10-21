@@ -14,12 +14,15 @@ export class RaisefundComponent implements OnInit {
     private adminService:AdminService
   ) { }
 
+  /** RegExp **/ 
+  amount = "/(\d{3,9})(\.\d{1,2})?/";
+
   ngOnInit() {
     this.raiseFundForm = this.formBuilder.group({
       requesType: ['', Validators.required],
-      amount: ['', Validators.required],
+      amount: ['', [Validators.required]],
       expiryDate: ['', Validators.required],
-      description: ['', Validators.required]
+      description: ['', [Validators.required]]
     });
   }
 

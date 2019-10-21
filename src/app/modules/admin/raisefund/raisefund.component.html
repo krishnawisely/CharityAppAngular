@@ -1,4 +1,4 @@
-<div class="row jsutify-content-center">
+<div class="row justify-content-center align-items-center" style="height: 100vh;">
     <div class="col-md-4">
         <div class="card text-center">
             <div class="card-img-top" style="margin-top: -50px;">
@@ -10,7 +10,6 @@
                     <mat-form-field class="example-full-width">
                         <mat-label>Select request type</mat-label>
                         <mat-select formControlName="requesType">
-                            <mat-option>None</mat-option>
                             <mat-option value="EDUCATION">Education</mat-option>
                             <mat-option value="FOOD">Food</mat-option>
                             <mat-option value="AGRICULTURE">Agriculture</mat-option>
@@ -18,7 +17,10 @@
                         </mat-select>
                     </mat-form-field>
                     <mat-form-field class="example-full-width">
-                        <input formControlName="amount" type="number" matInput placeholder="Amount(Rs)">
+                        <input formControlName="amount" type="text" matInput placeholder="Amount(Rs)"
+                        pattern="(\d{3,9})(\.\d{1,2})?"
+                        matTooltip="Amount should be like '100.50' or '100'"
+                        >
                     </mat-form-field>
                     <mat-form-field class="example-full-width">
                         <input formControlName="expiryDate" matInput [matDatepicker]="picker" placeholder="Choose expiry date">
@@ -26,9 +28,12 @@
                         <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
                     <mat-form-field class="example-full-width">
-                        <textarea formControlName="description" matInput placeholder="Description"></textarea>
+                        <textarea formControlName="description" matInput placeholder="Description"
+                        minlength="10" maxlength="150"
+                        matTooltip="Description min length is 10 and max length is 150"
+                        ></textarea>
                     </mat-form-field>
-                    <button type="submit" mat-raised-button color="primary">Raise Fund</button>
+                    <button type="submit" mat-raised-button color="primary" [disabled]="raiseFundForm.invalid">Raise Fund</button>
                     <button type="reset" mat-raised-button color="warn">Reset</button>
                 </form>
             </div>
