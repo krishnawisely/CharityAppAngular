@@ -15,20 +15,21 @@ These are all things happens via this application on online.
     - [x] Admin can see list of donors.
     - [x] Admin can see donor funded request details.
     - [x] Admin can raise request.
+    - [ ] Admin can update fund request.
   - Donor
     - [x] Donor can register.
     - [x] Donor can login.
     - [x] Donor can contribute.
+  - Validation for forms
+      - [x] Admin login
+      - [x] Donor login
+      - [x] Donor Register
+      - [x] Raise fund
+      - [x] Update fund
 - #### On going
     - [ ] Navigation.
 - #### ToDo
     - [ ] Validation for forms.
-      - [ ] Admin login
-      - [ ] Donor login
-      - [ ] Donor Register
-      - [ ] Raise fund
-      - [ ] Update fund
       - [ ] Contribute fund
-    - [ ] Admin can update fund request.
     - [ ] Footer
     - [ ] Bootstrap alerts.
