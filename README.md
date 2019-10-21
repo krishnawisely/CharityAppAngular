@@ -27,7 +27,7 @@ These are all things happens via this application on online.
       - [x] Raise fund
       - [x] Update fund
 - #### On going
-    - [ ] Validation for forms.
+    - Validation for forms.
       - [ ] Contribute fund
 - #### ToDo
     - [ ] Donor can see contribution details.
