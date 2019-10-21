@@ -15,7 +15,7 @@ These are all things happens via this application on online.
     - [x] Admin can see list of donors.
     - [x] Admin can see donor funded request details.
     - [x] Admin can raise request.
-    - [ ] Admin can update fund request.
+    - [x] Admin can update fund request.
   - Donor
     - [x] Donor can register.
     - [x] Donor can login.
