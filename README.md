@@ -30,7 +30,8 @@ These are all things happens via this application on online.
     - [ ] Donor can see contribution details.
 - #### ToDo
 - Validation for forms.
-      - [ ] Contribute fund
+      - [ ] Contribute fund.
+      - [ ] Date format.
       - [ ] Email is exist or not.
     - [ ] Donor can see contribution details.
     - [ ] Footer
